@@ -1,0 +1,58 @@
+@import "../../../../../../styles/base/color.palette";
+@import "../../../../../../styles/utils/mixins/border";
+@import "../../../../../../styles/base/vars";
+@import "../../../../../../styles/utils/mixins/typography";
+@import "../../../../../../styles/utils/mixins/flex";
+@import "../../../../../../styles/utils/mixins/size";
+@import "../../../../../../styles/utils/mixins/position";
+
+.header {
+  min-height: 60px;
+  width: 100%;
+  @include typography($cod-gray, bold, 25px,  $font-family-base, $line-height-base);
+  @include border(0, 0, 1px, 0, solid, $border-color-base, 0);
+  @include flex($justify: center, $align: center);
+}
+
+.user {
+  @include flex($justify:  space-around, $wrap: wrap);
+  padding: 50px;
+  &_avatar {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    img {
+      @include size(100%, 100%);
+    }
+  }
+  &_description {
+    @include size(60%, 700px);
+    @include relative();
+    min-width: 300px;
+    @include border(1px, 1px, 1px, 1px, solid, $border-color-base, 0);
+    margin-left: 10px;
+    @include flex($justify: center, $align: center);
+    @include mq("tablet") {
+      margin-top: 50px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      @include size(41px);
+      clip-path: polygon(100% 100%, 0 100%, 0 0);
+      @include absolute($top: -1px, $right: -1px);
+      background-color: $heather;
+      @include border(1px, 1px, 1px, 1px, solid, $border-color-base, 0);
+    }
+    &:before {
+      content: '';
+      display: block;
+      @include size(58px);
+      background-color: $aqua-haze;
+      transform: rotate(45deg);
+      @include absolute($top: -30px, $right: -30px);
+      z-index: 10;
+      border-bottom: 1px solid $border-color-base;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.users {
+  position: relative;
+  @include flex();
+  min-height: 100vh;
+
+  @include mq("tablet-small") {
+    flex-direction: column;
+  }
+  &_list {
+    min-width: 30vw;
+    border: $border-base;
+  }
+  &_main {
+    min-width: 70vw;
+    border: $border-base;
+  }
+}

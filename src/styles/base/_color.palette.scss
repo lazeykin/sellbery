@@ -1,0 +1,41 @@
+// Main palette
+$pacific-blue: #09c;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #ff612c;
+$yellow: #ffc107;
+$green: #24b06d;
+$teal: #20c997;
+$cyan: #17a2b8;
+$aqua-haze: #eef2f5;
+$big-stone: #151936;
+$cod-gray: #1a1a1a;
+$oslo-gray: #7e858d;
+$link-water: #fbfcfe;
+$vermilion: #ff4100;
+$heather: #c1cbd6;
+$rhino: #2b3059;
+
+$light-grey-1: $link-water;
+$light-grey-2: $aqua-haze;
+$grey: $heather;
+$dark-grey: $oslo-gray;
+$blue: #007ff3;
+
+// Greyscale
+$white: #fff;
+$gray-200: $light-grey-1;
+$gray-400: $light-grey-2;
+$gray-600: $grey;
+$gray-800: $dark-grey;
+$black: #000;
+
+// Theme colors
+$primary: $orange;
+$secondary: $big-stone;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;

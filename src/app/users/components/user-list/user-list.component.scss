@@ -1,0 +1,27 @@
+@import "../../../../styles/utils/mixins/border";
+@import "../../../../styles/utils/mixins/typography";
+@import "../../../../styles/utils/mixins/position";
+@import "../../../../styles/utils/mixins/size";
+@import "../../../../styles/base/vars";
+
+.user-list {
+  &_item {
+    @include border(1px, 1px, 1px, 0, solid, $border-color-base, 5px);
+    border-collapse: collapse;
+    min-height: 60px;
+    padding: 10px 10px 10px 50px;
+    @include relative();
+    &_title {
+      font-size: 14px;
+      @include typography($cod-gray, font-weight("Bold"), $font-size-base, $font-family-base, $line-height-base);
+    }
+    &:before {
+      display: block;
+      content: ' ';
+      background-image: url('../../../../assets/images/settings.svg');
+      background-size: 28px 28px;
+      @include size(28px, 28px);
+      @include absolute($top: 22px, $left: 15px);
+    }
+  }
+}

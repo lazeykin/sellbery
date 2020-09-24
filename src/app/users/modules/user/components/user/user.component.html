@@ -1,0 +1,19 @@
+<section *ngIf="user$ | async as user">
+  <header class="header">{{ user.fullName }}</header>
+
+  <div class="user">
+    <div class="user_avatar">
+      <img [src]="user.avatarUrl" alt="user" />
+    </div>
+    <div class="user_description">
+      <div>
+        <p>
+          {{ user.fullName }}
+        </p>
+        <p>
+          {{ user.phone }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

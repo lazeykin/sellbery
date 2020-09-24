@@ -1,0 +1,65 @@
+// Global base styles. Customize it depends on your project.
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: $app-min-width;
+  overflow-x: hidden;
+
+  @include typography($color-base, font-weight("Medium"), $font-size-base, $font-family-base, $line-height-base);
+
+  background-color: $body-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include typography($color: $title-color-base, $weight: font-weight("Bold"));
+}
+
+@each $title, $size in $title-sizes {
+  #{$title} {
+    font-size: $size;
+  }
+}
+
+h2 {
+  @include typography($weight: font-weight("Medium"), $lh: 40px);
+}
+
+h3 {
+  @include typography($weight: font-weight("Semi Bold"), $lh: 1.6);
+
+  @include mq("phone") {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  @include typography($weight: font-weight("Semi Bold"), $lh: 36px);
+}
+
+h6 {
+  @include typography($weight: font-weight("Semi Bold"), $lh: 18px);
+}
+
+p {
+  color: $color-base;
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+  }
+}

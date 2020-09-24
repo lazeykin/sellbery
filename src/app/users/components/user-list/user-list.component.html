@@ -1,0 +1,16 @@
+<div class="user-list">
+  <ul *ngIf="users.length; else noResults">
+    <li class="user-list_item" *ngFor="let user of users; trackBy: trackBy">
+      <a [routerLink]="'user/' + user.id">
+        <p>
+          <span class="user-list_item_title">Name:</span> {{ user.fullName }}
+        </p>
+        <p><span class="user-list_item_title">Pone:</span> {{ user.phone }}</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noResults>
+  <div>No results found</div>
+</ng-template>

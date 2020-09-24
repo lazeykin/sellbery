@@ -1,0 +1,9 @@
+<div class="users">
+  <section class="users_list">
+    <app-filter (search)="onFilterChange($event)"></app-filter>
+    <app-user-list [users]="users$ | async"></app-user-list>
+  </section>
+  <section class="users_main">
+    <router-outlet></router-outlet>
+  </section>
+</div>
